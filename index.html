@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flonk</title>
+        <link rel="icon" type="image/x-icon" href="flonkLogo.png">
+        <script src="jquery-3.6.1.min.js"></script>
+        <style>
+
+            body{
+                background-color: white;
+                color: black;
+                font-size: 25px;
+                font-weight: bold;
+            }
+
+            .top-section img{
+            margin-left: 5vw;
+            width:90vw; /*width of your image*/
+            height:100vh; /*height of your image*/
+            }
+
+
+
+            #triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid orange;
+            margin-left: 50vw;
+            margin-top: 88vh;
+            transition-property: font-size;
+            animation: MoveUpDown 1s linear infinite;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            }
+
+            @keyframes MoveUpDown {
+            0%, 100% {
+            bottom: 0;
+            }
+            50% {
+            bottom: 100px;
+            }
+        }
+
+            #main-section{
+                position: relative;
+            }
+
+            #info-section img{
+                max-width: 10vw;
+                height: auto;
+            }
+
+
+            #info-section{
+                max-width:90vw;
+                height:auto;
+                text-align: center;
+                margin-left: 5vw;
+                margin-top: 35vh;
+                padding-bottom: 20vh;
+                inline-size: 90vw; 
+                overflow: hidden;
+            }
+
+            h1{
+                font-size: 5em;
+            }
+
+
+            @media only screen and (max-width: 749px) {
+                 body {
+                    background-color: white;
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                 }
+
+                 h1{
+                font-size: 4em;
+            }
+            .top-section img{
+                padding-left: 0;
+                margin-left: 0;
+            width:100vw; /*width of your image*/
+            height:auto; /*height of your image*/
+            }
+
+            
+            #info-section{
+                max-width:90vw;
+                height:auto;
+                text-align: center;
+                margin-left: 0;
+                padding-left: 5vw;
+                margin-top: 35vh;
+                padding-bottom: 20vh;
+                inline-size: 90vw; 
+                overflow: hidden;
+            }
+
+            #triangle-down {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 30px solid orange;
+
+            margin-left: 45vw;
+            margin-top: 88vh;
+            transition-property: font-size;
+            animation: MoveUpDown 1s linear infinite;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            visibility: hidden;
+            }
+
+            #info-section img{
+                max-width: 20vw;
+                height: auto;
+            }
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+
+        <div class="top-section"><img src="FlonkBackground.jpg"></div>
+        <a href="javascript: document.body.scrollIntoView(false);"><div id="triangle-down"></div></a>
+     
+
+        <div id="main-section">
+
+            <script>
+                  $(document).ready(function() {
+  $('.image-link').magnificPopup({type:'image'});
+
+  $(document).ready(function() {
+  $('.image-link2').magnificPopup({type:'image'});
+});
+
+</script>
+
+            
+
+            <div id="info-section">
+                <h1>FLONK</h1>
+                <p>For the people, by the people and airdropped to the people</p>
+
+                    <a href="https://raydium.io/swap?inputCurrency=3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF&outputCurrency=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&fixed=in"><img src="raydium.png"></a>
+                    <a href="https://twitter.com/FlonkCoin"><img src="twitter.png"></a>
+                    <a href="https://solscan.io/token/3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF"><img src="solscan.png"></a>
+                    <a class="image-link" href="chart.png"><img src="chartLogo.png"></a>
+                    <a class="image-link2" href="roadmap.jpg"><img src="roadmapicon.png"></a>
+            </div>
+
+        </div> 
+
+    </body>
+</html>
