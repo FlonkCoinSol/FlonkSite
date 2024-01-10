@@ -6,125 +6,118 @@
         <link rel="icon" type="image/x-icon" href="flonkLogo.png">
         <script src="jquery-3.6.1.min.js"></script>
         <style>
+                * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+            overflow: hidden;
+        }
 
             body{
-                background-color: white;
                 color: black;
                 font-size: 25px;
                 font-weight: bold;
             }
 
-            .top-section img{
-            margin-left: 5vw;
-            width:90vw; /*width of your image*/
-            height:100vh; /*height of your image*/
+            #mainSection img{
+                width: 100vw;
+                height: 100vh;
             }
 
-
-
-            #triangle-down {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 100px solid orange;
-            margin-left: 50vw;
-            margin-top: 88vh;
-            transition-property: font-size;
-            animation: MoveUpDown 1s linear infinite;
-            position: absolute;
+            #mainSection{
+            position: relative;
+            top: 0;
             left: 0;
-            bottom: 0;
             }
 
-            @keyframes MoveUpDown {
-            0%, 100% {
-            bottom: 0;
-            }
-            50% {
-            bottom: 100px;
-            }
-        }
-
-            #main-section{
-                position: relative;
+            
+            #backgroundDiv{
+            position: relative;
+            top: 0;
+            left: 0;
             }
 
-            #info-section img{
-                max-width: 10vw;
+            #flonkTitle{
+            position: absolute;
+            top: 27vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            }
+
+            #flonklogodiv{
+            position: absolute;
+            top: 10vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            }
+
+            #flonklogodiv img{
+                max-width: 200px;
+                max-height: 200px;
+            }
+
+
+            #infoSection{
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            text-align: center;
+            }
+
+            #infoSection img{
+                max-width: 100px;
                 height: auto;
             }
 
-
-            #info-section{
-                max-width:90vw;
-                height:auto;
-                text-align: center;
-                margin-left: 5vw;
-                margin-top: 35vh;
-                padding-bottom: 20vh;
-                inline-size: 90vw; 
-                overflow: hidden;
-            }
 
             h1{
                 font-size: 5em;
             }
 
+            @media screen and (max-width: 700px) {
+                h1{
+                    font-size: 3.4em;
+                }
 
-            @media only screen and (max-width: 749px) {
-                 body {
-                    background-color: white;
-                    padding: 0;
-                    margin: 0;
-                    text-align: center;
-                 }
+                #infoSection p{
+                    font-size: 0.5em;
+                    font-weight: lighter;
+                }
 
-                 h1{
-                font-size: 4em;
-            }
-            .top-section img{
-                padding-left: 0;
-                margin-left: 0;
-            width:100vw; /*width of your image*/
-            height:auto; /*height of your image*/
+                #flonklogodiv img{
+                    max-width: 180px;
+                    max-height: 180px;
+                }
             }
 
-            
-            #info-section{
-                max-width:90vw;
-                height:auto;
-                text-align: center;
-                margin-left: 0;
-                padding-left: 5vw;
-                margin-top: 35vh;
-                padding-bottom: 20vh;
-                inline-size: 90vw; 
-                overflow: hidden;
+            @media screen and (max-width: 300px) {
+
+                h1{
+                    font-size: 2em;
+                }
+
+                #flonkTitle{
+                    top: 28%;
+                }
+
+                #infoSection p{
+                    font-size: 0.4em;
+                    font-weight: lighter;
+                }
+
+                #flonklogodiv img{
+                    max-width: 180px;
+                    max-height: 180px;
+                }
             }
 
-            #triangle-down {
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 30px solid orange;
-
-            margin-left: 45vw;
-            margin-top: 88vh;
-            transition-property: font-size;
-            animation: MoveUpDown 1s linear infinite;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            visibility: hidden;
-            }
-
-            #info-section img{
-                max-width: 20vw;
-                height: auto;
-            }
-            }
 
 
         </style>
@@ -132,11 +125,36 @@
 
     <body>
 
-        <div class="top-section"><img src="FlonkBackground.jpg"></div>
-        <a href="javascript: document.body.scrollIntoView(false);"><div id="triangle-down"></div></a>
+        <div id="mainSection">
+
+            <div id="backgroundDiv">
+                <img src="background.png">
+            </div>
+            
+            <div id="flonkTitle">
+                <h1>FLONK</h1>
+                <p>For the people, by the people and airdropped to the people</p>
+            </div>
+
+            <div id="flonklogodiv">
+                <img src="flonkLogo.png">
+            </div>
+
+            <div id="infoSection">
+
+                    <a href="https://jup.ag/swap/SOL-FLONK_3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF"><img src="jupiter.png"></a>
+                    <a href="https://twitter.com/FlonkCoin"><img src="twitter.png"></a>
+                    <a href="https://www.coingecko.com/en/coins/flonk"><img src="coingecko.png"></a>
+                    <a class="image-link" href="chart.png"><img src="chartLogo.png"></a>
+                    <a class="image-link2" href="roadmap.jpg"><img src="roadmapicon.png"></a>
+                    <p>Address: 3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF</p>
+            </div>
+            
+        </div>
+        <!-- <a href="javascript: document.body.scrollIntoView(false);"><div id="triangle-down"></div></a> -->
      
 
-        <div id="main-section">
+        <!-- <div id="main-section">
 
             <script>
                   $(document).ready(function() {
@@ -150,18 +168,8 @@
 
             
 
-            <div id="info-section">
-                <h1>FLONK</h1>
-                <p>For the people, by the people and airdropped to the people</p>
 
-                    <a href="https://raydium.io/swap?inputCurrency=3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF&outputCurrency=EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v&fixed=in"><img src="raydium.png"></a>
-                    <a href="https://twitter.com/FlonkCoin"><img src="twitter.png"></a>
-                    <a href="https://solscan.io/token/3VJyo1n5EkBGh6uEcnKA1Bf8EgVnvrK3XjcDZDDXsPLF"><img src="solscan.png"></a>
-                    <a class="image-link" href="chart.png"><img src="chartLogo.png"></a>
-                    <a class="image-link2" href="roadmap.jpg"><img src="roadmapicon.png"></a>
-            </div>
-
-        </div> 
+        </div>  -->
 
     </body>
 </html>
